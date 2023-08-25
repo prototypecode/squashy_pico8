@@ -1,5 +1,7 @@
 # Squashy Pico-8
 
+[Demo Game](https://prototypecode.itch.io/squashy-pico-8)
+
 ---
 
 ## Step 1: Paddle
