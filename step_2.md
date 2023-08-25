@@ -41,4 +41,4 @@ end
 
 ```
 
-[Step 3: Ball Movement]()
+[Step 3: Ball Movement](step_3.md)
