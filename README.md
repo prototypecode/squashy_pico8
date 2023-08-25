@@ -38,6 +38,6 @@ END
 
 ---
 
-[Step 2: Ball]()
+[Step 2: Ball](step_2.md)
 
 ---
