@@ -2,12 +2,38 @@
 
 ---
 
+## Step 1: Paddle
+
+### Pg. 0
+
 ```lua
+
 --PADDLE
 PADX = 52
 PADY = 122
 PADW = 24
 PADH = 4
+
+FUNCTION MOVEPADDLE()
+  IF BTN(0) THEN
+    PADX -= 3
+  ELSEIF BTN(1) THEN
+    PADX += 3
+  END
+END
+
+FUNCTION _UPDATE()
+  MOVEPADDLE()
+END
+
+FUNCTION _DRAW()
+  --CLEAR THE SCREEN
+  RECTFILL(0, 0, 128, 128, 3)
+
+  --DRAW THE PADDLE
+  RECTFILL(PADX, PADY, PADX + PADW, PADY + PADH, 15)
+END
+
 ```
 
 ---
