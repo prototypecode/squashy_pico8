@@ -5,6 +5,7 @@
 ```lua
 
 score = 0
+lives = 3
 
 --paddle
 padx = 52
@@ -33,11 +34,21 @@ function moveball()
 end
 
 function losedeadball()
-	if bally > 128 then
-		sfx(3)
-		bally = 24
+	if bally > 128 - ballsize then
+		if lives > 0 then
+			--next life
+			sfx(3)
+			bally = 24
+			lives -= 1
+		else
+			--game over
+			ballydir = 0
+			ballxdir = 0
+			bally = 64
+		end
 	end
 end
+
 
 function bounceball()
 	--left
@@ -81,6 +92,11 @@ end
 function _draw()
 	--clear the screen
 	rectfill(0, 0, 128, 128, 3)
+	
+	--draw the lives
+	for i = 1, lives do
+		spr(004, 90 + i * 8, 4)
+	end
 	
 	--draw the score
 	print(score, 12, 6, 15)
