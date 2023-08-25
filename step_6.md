@@ -1,4 +1,4 @@
-Step 6: Ball Callback
+# Step 6: Ball Callback
 
 ![](ball_callback_sound.png)
 
