@@ -8,31 +8,31 @@
 
 ```lua
 
---PADDLE
-PADX = 52
-PADY = 122
-PADW = 24
-PADH = 4
+--paddle
+padx = 52
+pady = 122
+padw = 24
+padh = 4
 
-FUNCTION MOVEPADDLE()
-  IF BTN(0) THEN
-    PADX -= 3
-  ELSEIF BTN(1) THEN
-    PADX += 3
-  END
-END
+function movepaddle()
+  if btn(0) then
+    padx -= 3
+  elseif btn(1) then
+    padx += 3
+  end
+end
 
-FUNCTION _UPDATE()
-  MOVEPADDLE()
-END
+function _update()
+  movepaddle()
+end
 
-FUNCTION _DRAW()
-  --CLEAR THE SCREEN
-  RECTFILL(0, 0, 128, 128, 3)
+function _draw()
+  --clear the screen
+  rectfill(0, 0, 128, 128, 3)
 
-  --DRAW THE PADDLE
-  RECTFILL(PADX, PADY, PADX + PADW, PADY + PADH, 15)
-END
+  --draw the paddle
+  rectfill(padx, pady, padx + padw, pady + padh, 15)
+end
 
 ```
 
