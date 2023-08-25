@@ -50,5 +50,5 @@ end
 
 ---
 
-[Step 4: Stay In Screen]()
+[Step 4: Stay In Screen](step_4.md)
 
